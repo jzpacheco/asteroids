@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import sys
 
 import pygame
@@ -7,11 +8,17 @@ from asteroidfield import AsteroidField
 from constants import *
 from player import Player
 from shot import Shot
+=======
+import pygame
+
+from constants import *
+>>>>>>> 807f1f1 (git init)
 
 
 def main():
     print("Starting Asteroids!")
     pygame.init()
+<<<<<<< HEAD
     clock=pygame.time.Clock()
     dt=0
 
@@ -56,6 +63,14 @@ def main():
         pygame.display.flip()
         last_time=clock.tick(60)
         dt=last_time/1000
+=======
+
+    print(f"Screen width: {SCREEN_WIDTH}\nScreen height: {SCREEN_HEIGHT}")
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    while True:
+        screen.fill("black")
+        pygame.display.flip()
+>>>>>>> 807f1f1 (git init)
 
 
 if __name__ == "__main__":
