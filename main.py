@@ -36,18 +36,22 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
-
         screen.fill("black")
-        
+
         updatable.update(dt)
 
         for dr in drawable:
             dr.draw(screen)
-        
+
         for ast in asteroids:
             if ast.is_colliding(player):
                 print("Game over!")
                 sys.exit()
+
+            for st in shots:
+                if ast.is_colliding(st):
+                    ast.split()
+                    st.kill()
 
         pygame.display.flip()
         last_time=clock.tick(60)
